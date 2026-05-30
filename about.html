@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Silver Spoon Cafe &amp; Restaurant, King's Lynn</title>
+<meta name="description" content="The Silver Spoon story — a family-run cafe on Norfolk Street, King's Lynn. Honest food, generous portions, a properly clean room.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F1611;--paper:#FBF6EA;--cream:#F4E4BC;--brick:#8B3A3A;--brick-deep:#6A2727;
+  --pewter:#9C9892;--rule:rgba(31,22,17,.18);
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Lora",Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(1rem,.95rem + .15vw,1.075rem);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--brick);text-decoration:none;text-underline-offset:3px}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.015em;text-wrap:balance;margin:0 0 .5em}
+p{text-wrap:pretty;hyphens:auto;margin:0 0 1em}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
+
+.bar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--rule)}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1.25rem;max-width:74rem;margin:0 auto}
+.brand{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.01em;color:var(--ink);display:inline-flex;align-items:center;gap:.55rem}
+.brand .sp{width:1.1rem;height:1.1rem;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e7e5df,var(--pewter) 55%,#5e5b56);box-shadow:inset 0 0 0 1px rgba(31,22,17,.25);flex:0 0 auto}
+nav.menu{display:none;gap:1.4rem;font-size:.96rem}
+nav.menu a{color:var(--ink);font-weight:500}
+nav.menu a.current{color:var(--brick);text-decoration:underline}
+.call{font-family:var(--display);font-weight:600;font-size:1rem;background:var(--brick);color:var(--paper);padding:.55rem .9rem;border-radius:999px;display:inline-flex}
+.call:hover{background:var(--brick-deep);text-decoration:none}
+@media (min-width:780px){nav.menu{display:inline-flex}}
+@media (max-width:779px){.call{padding:.45rem .8rem;font-size:.92rem}}
+
+.page-head{padding:clamp(3rem,7vw,5.5rem) 0 clamp(1.5rem,3vw,2.5rem);border-bottom:1px solid var(--rule)}
+.page-head .kicker{font-family:var(--display);font-style:italic;color:var(--brick);font-size:1rem;margin:0 0 .8rem}
+.page-head h1{font-size:clamp(2.6rem,6vw + 1rem,5.5rem);line-height:.95;margin:0 0 1rem;font-weight:800}
+.page-head .sub{max-width:42rem;font-size:1.15rem;color:#3a2a22}
+
+section{padding:clamp(3rem,6vw,5rem) 0}
+section.alt{background:var(--cream)}
+
+.story{display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:880px){.story{grid-template-columns:1fr 1.4fr;gap:4rem}}
+.story .lead{font-family:var(--display);font-style:italic;font-size:1.4rem;line-height:1.35;color:var(--brick)}
+.story h2{font-size:clamp(1.7rem,2.5vw + .6rem,2.4rem);margin-top:1.4rem}
+.story p{font-size:1.05rem;color:#2c2018}
+
+.facts{
+  display:grid;grid-template-columns:1fr;gap:1.2rem;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:2rem 0;margin:3rem 0;
+}
+@media (min-width:700px){.facts{grid-template-columns:repeat(3,1fr);gap:2rem}}
+.fact dt{font-family:var(--display);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--brick);margin:0 0 .3rem}
+.fact dd{margin:0;font-family:var(--display);font-size:1.6rem;font-weight:600;line-height:1.1}
+.fact dd small{display:block;font-family:var(--body);font-style:italic;font-size:.95rem;font-weight:400;color:#5a4538;margin-top:.4rem}
+
+.cta-band{background:var(--ink);color:var(--paper);padding:clamp(3rem,6vw,5rem) 0}
+.cta-band h2{font-size:clamp(2rem,4vw + 1rem,3.4rem);line-height:1;color:var(--paper)}
+.cta-band .lede{color:rgba(251,246,234,.78);max-width:36rem;margin-bottom:1.8rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.4rem;border-radius:999px;font-family:var(--display);font-weight:600;font-size:1rem}
+.btn.primary{background:var(--cream);color:var(--ink)}
+.btn.ghost{border:1px solid rgba(251,246,234,.4);color:var(--paper)}
+.actions{display:flex;flex-wrap:wrap;gap:.9rem}
+
+footer{background:var(--paper);border-top:1px solid var(--rule);padding:2.5rem 0 1.5rem;font-size:.9rem;color:#4a382c}
+footer .grid{display:grid;gap:2rem 3rem;grid-template-columns:1fr}
+@media (min-width:760px){footer .grid{grid-template-columns:2fr 1fr 1fr}}
+footer h4{font-family:var(--display);font-size:1.1rem;margin:0 0 .6rem;color:var(--ink)}
+footer a{color:#4a382c}
+footer .fine{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.82rem;color:#7a6a5d}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="index.html"><span class="sp" aria-hidden="true"></span>Silver Spoon</a>
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="current">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="call" href="tel:+441553760057">01553 760057</a>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">about</p>
+    <h1>A family cafe on<br>Norfolk Street.</h1>
+    <p class="sub">Silver Spoon is one of those places King's Lynn quietly loves — the cafe where the breakfast is hearty, the room is clean, and the welcome is real.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="story">
+      <div>
+        <p class="lead">We open early, we cook fresh, and we look after every plate that leaves the kitchen.</p>
+      </div>
+      <div>
+        <h2>How we do things.</h2>
+        <p>Silver Spoon is a family-run cafe and restaurant on Norfolk Street, in the heart of King's Lynn. We've been quietly building a regular following over the years — through generous breakfasts, the kind of jacket potatoes that fill a lunchbreak properly, and a counter where the people behind it actually know their customers.</p>
+
+        <h2>What we care about.</h2>
+        <p>A clean room. That comes first — visitors mention it in every other review, and we take that seriously. Beyond that, hot food served hot, fresh ingredients, generous helpings, and prices that don't make you wince. We're not chasing trends. We're cooking good British cafe food the way it should be done.</p>
+
+        <h2>Who we welcome.</h2>
+        <p>Everyone. We've got wheelchair access, highchairs for the little ones, vegetarian and vegan options on the board, and gluten-free choices across the menu. Pop in, walk-ins are always fine — and if you've got a question about what's in something, just ask at the counter.</p>
+      </div>
+    </div>
+
+    <dl class="facts">
+      <div class="fact"><dt>Food Hygiene</dt><dd>Good<small>FSA-rated · last inspected Sept 2024</small></dd></div>
+      <div class="fact"><dt>Tripadvisor</dt><dd>4.3 / 5<small>#36 of 201 restaurants in King's Lynn</small></dd></div>
+      <div class="fact"><dt>Open</dt><dd>7 days<small>Mon–Sat 8am – 6pm · Sun 9am – 5pm</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Come and try us.</h2>
+    <p class="lede">Walk in for breakfast, lunch or a proper cup of tea. We're on Norfolk Street, open seven days a week.</p>
+    <div class="actions">
+      <a class="btn primary" href="menu.html">See the menu</a>
+      <a class="btn ghost" href="contact.html">Get directions</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h4>Silver Spoon Cafe &amp; Restaurant</h4>
+        <p>A family-run cafe on Norfolk Street, King's Lynn. Honest food, generous portions, a clean room and a warm welcome.</p>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <p>121–122 Norfolk Street<br>King's Lynn<br>Norfolk PE30 1AP</p>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <p><a href="tel:+441553760057">01553 760057</a><br>Mon–Sat 8am – 6pm<br>Sun 9am – 5pm</p>
+      </div>
+    </div>
+    <p class="fine">© Silver Spoon Cafe &amp; Restaurant, King's Lynn. Site by Karam Binning.</p>
+  </div>
+</footer>
+
+</body>
+</html>

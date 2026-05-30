@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery — Silver Spoon Cafe &amp; Restaurant, King's Lynn</title>
+<meta name="description" content="Photos from Silver Spoon Cafe — Norfolk Street, King's Lynn. Coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F1611;--paper:#FBF6EA;--cream:#F4E4BC;--brick:#8B3A3A;--brick-deep:#6A2727;
+  --pewter:#9C9892;--rule:rgba(31,22,17,.18);
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Lora",Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(1rem,.95rem + .15vw,1.075rem);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--brick);text-decoration:none;text-underline-offset:3px}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.015em;text-wrap:balance;margin:0 0 .5em}
+p{text-wrap:pretty;hyphens:auto;margin:0 0 1em}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
+
+.bar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--rule)}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1.25rem;max-width:74rem;margin:0 auto}
+.brand{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.01em;color:var(--ink);display:inline-flex;align-items:center;gap:.55rem}
+.brand .sp{width:1.1rem;height:1.1rem;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e7e5df,var(--pewter) 55%,#5e5b56);box-shadow:inset 0 0 0 1px rgba(31,22,17,.25);flex:0 0 auto}
+nav.menu{display:none;gap:1.4rem;font-size:.96rem}
+nav.menu a{color:var(--ink);font-weight:500}
+nav.menu a.current{color:var(--brick);text-decoration:underline}
+.call{font-family:var(--display);font-weight:600;font-size:1rem;background:var(--brick);color:var(--paper);padding:.55rem .9rem;border-radius:999px}
+.call:hover{background:var(--brick-deep);text-decoration:none}
+@media (min-width:780px){nav.menu{display:inline-flex}}
+@media (max-width:779px){.call{padding:.45rem .8rem;font-size:.92rem}}
+
+.page-head{padding:clamp(3rem,7vw,5.5rem) 0 clamp(1.5rem,3vw,2.5rem);border-bottom:1px solid var(--rule)}
+.page-head .kicker{font-family:var(--display);font-style:italic;color:var(--brick);font-size:1rem;margin:0 0 .8rem}
+.page-head h1{font-size:clamp(2.6rem,6vw + 1rem,5.5rem);line-height:.95;margin:0 0 1rem;font-weight:800}
+.page-head .sub{max-width:42rem;font-size:1.15rem;color:#3a2a22}
+
+section{padding:clamp(2.5rem,5vw,4rem) 0}
+
+.grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;
+}
+@media (min-width:680px){.grid{grid-template-columns:repeat(3,1fr);gap:1.25rem}}
+@media (min-width:980px){.grid{grid-template-columns:repeat(4,1fr)}}
+
+.tile{
+  aspect-ratio:4/5;border:1px solid var(--rule);border-radius:6px;
+  background:var(--cream);
+  display:flex;align-items:flex-end;justify-content:flex-start;
+  padding:1.1rem;position:relative;overflow:hidden;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(122,46,42,.05) 0, rgba(122,46,42,.05) 14px, transparent 14px, transparent 28px),
+    linear-gradient(180deg, rgba(255,255,255,.5), rgba(244,228,188,1));
+}
+.tile.wide{aspect-ratio:8/5;grid-column:span 2}
+.tile .label{
+  font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--brick);
+  background:var(--paper);padding:.35rem .7rem;border-radius:999px;border:1px solid var(--rule);
+}
+.tile.l1{background-image:repeating-linear-gradient(0deg, rgba(122,46,42,.06) 0, rgba(122,46,42,.06) 1px, transparent 1px, transparent 22px),linear-gradient(180deg, #fdf3da, var(--cream))}
+.tile.l2{background-image:radial-gradient(circle at 30% 30%, rgba(156,152,146,.25), transparent 60%),linear-gradient(180deg, var(--cream), #ead7a8)}
+.tile.l3{background-image:linear-gradient(135deg, var(--cream) 0%, #f7e0b1 100%)}
+.tile.l4{background-image:repeating-linear-gradient(90deg, rgba(31,22,17,.04) 0, rgba(31,22,17,.04) 18px, transparent 18px, transparent 36px),linear-gradient(180deg, var(--cream), #e7d49d)}
+
+.note{
+  margin-top:3rem;background:var(--cream);border:1px solid var(--rule);border-radius:6px;
+  padding:1.5rem 1.7rem;font-size:1rem;color:#3a2a22;
+}
+.note strong{font-family:var(--display);font-weight:600}
+
+footer{background:var(--paper);border-top:1px solid var(--rule);padding:2.5rem 0 1.5rem;font-size:.9rem;color:#4a382c}
+footer .grid-f{display:grid;gap:2rem 3rem;grid-template-columns:1fr}
+@media (min-width:760px){footer .grid-f{grid-template-columns:2fr 1fr 1fr}}
+footer h4{font-family:var(--display);font-size:1.1rem;margin:0 0 .6rem;color:var(--ink)}
+footer a{color:#4a382c}
+footer .fine{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.82rem;color:#7a6a5d}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="index.html"><span class="sp" aria-hidden="true"></span>Silver Spoon</a>
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html" class="current">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="call" href="tel:+441553760057">01553 760057</a>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">gallery</p>
+    <h1>Photos —<br>coming soon.</h1>
+    <p class="sub">We're putting together a proper gallery — the room, the plates, the staff. Until the photos are in, here's the space they'll live in.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid" aria-label="Gallery placeholders — photos coming soon">
+      <div class="tile wide l1"><span class="label">The front of house</span></div>
+      <div class="tile l2"><span class="label">Builders Breakfast</span></div>
+      <div class="tile l3"><span class="label">Jacket potatoes</span></div>
+      <div class="tile l4"><span class="label">Counter cakes</span></div>
+      <div class="tile l2"><span class="label">Omelette of the day</span></div>
+      <div class="tile l1"><span class="label">A proper cuppa</span></div>
+      <div class="tile wide l3"><span class="label">The dining room</span></div>
+      <div class="tile l4"><span class="label">Paninis, hot off the press</span></div>
+    </div>
+
+    <div class="note">
+      <strong>Got a photo from your visit?</strong> Tag us on socials or pop one in over email — we'd love to feature it here. In the meantime, give us a call on <a href="tel:+441553760057">01553 760057</a> if you'd like to know more about what's on the counter today.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid-f">
+      <div>
+        <h4>Silver Spoon Cafe &amp; Restaurant</h4>
+        <p>A family-run cafe on Norfolk Street, King's Lynn. Honest food, generous portions, a clean room and a warm welcome.</p>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <p>121–122 Norfolk Street<br>King's Lynn<br>Norfolk PE30 1AP</p>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <p><a href="tel:+441553760057">01553 760057</a><br>Mon–Sat 8am – 6pm<br>Sun 9am – 5pm</p>
+      </div>
+    </div>
+    <p class="fine">© Silver Spoon Cafe &amp; Restaurant, King's Lynn. Site by Karam Binning.</p>
+  </div>
+</footer>
+
+</body>
+</html>

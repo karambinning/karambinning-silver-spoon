@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu — Silver Spoon Cafe &amp; Restaurant, King's Lynn</title>
+<meta name="description" content="The Silver Spoon menu — breakfasts, jacket potatoes, paninis, omelettes and more. Vegetarian, vegan and gluten-free options. Norfolk Street, King's Lynn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F1611;--paper:#FBF6EA;--cream:#F4E4BC;--brick:#8B3A3A;--brick-deep:#6A2727;
+  --pewter:#9C9892;--rule:rgba(31,22,17,.18);
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Lora",Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(1rem,.95rem + .15vw,1.075rem);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--brick);text-decoration:none;text-underline-offset:3px}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.015em;text-wrap:balance;margin:0 0 .5em}
+p{text-wrap:pretty;hyphens:auto;margin:0 0 1em}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
+
+.bar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--rule)}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1.25rem;max-width:74rem;margin:0 auto}
+.brand{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.01em;color:var(--ink);display:inline-flex;align-items:center;gap:.55rem}
+.brand .sp{width:1.1rem;height:1.1rem;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e7e5df,var(--pewter) 55%,#5e5b56);box-shadow:inset 0 0 0 1px rgba(31,22,17,.25);flex:0 0 auto}
+nav.menu{display:none;gap:1.4rem;font-size:.96rem}
+nav.menu a{color:var(--ink);font-weight:500}
+nav.menu a.current{color:var(--brick);text-decoration:underline}
+.call{font-family:var(--display);font-weight:600;font-size:1rem;background:var(--brick);color:var(--paper);padding:.55rem .9rem;border-radius:999px}
+.call:hover{background:var(--brick-deep);text-decoration:none}
+@media (min-width:780px){nav.menu{display:inline-flex}}
+@media (max-width:779px){.call{padding:.45rem .8rem;font-size:.92rem}}
+
+.page-head{padding:clamp(3rem,7vw,5.5rem) 0 clamp(1.5rem,3vw,2.5rem);border-bottom:1px solid var(--rule)}
+.page-head .kicker{font-family:var(--display);font-style:italic;color:var(--brick);font-size:1rem;margin:0 0 .8rem}
+.page-head h1{font-size:clamp(2.6rem,6vw + 1rem,5.5rem);line-height:.95;margin:0 0 1rem;font-weight:800}
+.page-head .sub{max-width:42rem;font-size:1.15rem;color:#3a2a22}
+
+section{padding:clamp(2.5rem,5vw,4rem) 0}
+
+.note{
+  background:var(--cream);border:1px solid var(--rule);border-radius:6px;
+  padding:1.1rem 1.3rem;font-size:.95rem;color:#3a2a22;margin-bottom:2.5rem;
+}
+.note strong{font-family:var(--display);font-weight:600}
+
+.menu-group{margin-bottom:3.5rem}
+.menu-group h2{
+  font-size:clamp(1.8rem,2.6vw + .8rem,2.6rem);
+  border-bottom:2px solid var(--brick);padding-bottom:.4rem;display:inline-block;margin-bottom:1.4rem;
+}
+.menu-group .gloss{font-family:var(--display);font-style:italic;color:#5a4538;font-size:1.05rem;margin:-.6rem 0 1.8rem}
+
+.menu-list{list-style:none;padding:0;margin:0;display:grid;gap:1.2rem;grid-template-columns:1fr}
+@media (min-width:780px){.menu-list{grid-template-columns:repeat(2,1fr);gap:1.3rem 2.4rem}}
+.menu-item{
+  display:flex;align-items:baseline;gap:.8rem;
+  border-bottom:1px dotted var(--rule);padding-bottom:1rem;
+}
+.menu-item .name{font-family:var(--display);font-weight:600;font-size:1.2rem;line-height:1.2;flex:0 0 auto;color:var(--ink)}
+.menu-item .desc{font-size:.95rem;color:#3a2a22;flex:1;min-width:0}
+.menu-item .tag{display:inline-block;margin-left:.45rem;font-family:var(--body);font-style:italic;font-size:.8rem;color:var(--brick);letter-spacing:.04em;text-transform:uppercase}
+
+.fillings{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem 1.5rem;
+  font-family:var(--body);font-size:1rem;padding:0;margin:0;list-style:none;
+}
+@media (min-width:780px){.fillings{grid-template-columns:repeat(3,1fr)}}
+.fillings li{position:relative;padding-left:1.2rem;color:#2c2018}
+.fillings li::before{content:"·";position:absolute;left:.45rem;color:var(--brick);font-weight:700}
+
+.diet-key{
+  display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:2rem;font-size:.85rem;color:#5a4538;
+}
+.diet-key span{font-family:var(--display);color:var(--brick);font-style:italic;margin-right:.3rem}
+
+.cta-band{background:var(--ink);color:var(--paper);padding:clamp(3rem,6vw,5rem) 0}
+.cta-band h2{font-size:clamp(2rem,4vw + 1rem,3.2rem);line-height:1;color:var(--paper)}
+.cta-band .lede{color:rgba(251,246,234,.78);max-width:36rem;margin-bottom:1.8rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.4rem;border-radius:999px;font-family:var(--display);font-weight:600;font-size:1rem}
+.btn.primary{background:var(--cream);color:var(--ink)}
+.btn.ghost{border:1px solid rgba(251,246,234,.4);color:var(--paper)}
+.actions{display:flex;flex-wrap:wrap;gap:.9rem}
+
+footer{background:var(--paper);border-top:1px solid var(--rule);padding:2.5rem 0 1.5rem;font-size:.9rem;color:#4a382c}
+footer .grid{display:grid;gap:2rem 3rem;grid-template-columns:1fr}
+@media (min-width:760px){footer .grid{grid-template-columns:2fr 1fr 1fr}}
+footer h4{font-family:var(--display);font-size:1.1rem;margin:0 0 .6rem;color:var(--ink)}
+footer a{color:#4a382c}
+footer .fine{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.82rem;color:#7a6a5d}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="index.html"><span class="sp" aria-hidden="true"></span>Silver Spoon</a>
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html" class="current">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="call" href="tel:+441553760057">01553 760057</a>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">menu</p>
+    <h1>What's on,<br>most days.</h1>
+    <p class="sub">A working cafe menu — breakfasts served all day, jacket potatoes baked through, paninis pressed hot, salads on the side. Vegetarian, vegan and gluten-free options across the board.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <div class="note">
+      <strong>A note on prices.</strong> Prices change with the seasons and the wholesalers — we're keeping them off the website so what you see in the cafe is always current. Pop in or call <a href="tel:+441553760057">01553 760057</a> if you'd like a quote for a group or a takeaway.
+    </div>
+
+    <div class="menu-group">
+      <h2>Breakfasts</h2>
+      <p class="gloss">Served all day. Toast, butter, condiments and a pot of tea on request.</p>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <span class="name">The Builders</span>
+          <span class="desc">The full plate — bacon, sausage, egg, beans, tomato, hash brown, mushrooms, toast. <span class="tag">cafe classic</span></span>
+        </li>
+        <li class="menu-item">
+          <span class="name">Mega Breakfast</span>
+          <span class="desc">Double bacon, double sausage, two eggs, beans, tomato, hash browns, mushrooms, fried bread, toast. Bring an appetite.</span>
+        </li>
+        <li class="menu-item">
+          <span class="name">All-Day Breakfast</span>
+          <span class="desc">The classic full English, on the plate whenever you arrive.</span>
+        </li>
+        <li class="menu-item">
+          <span class="name">Veggie Breakfast</span>
+          <span class="desc">Two eggs, beans, tomato, mushrooms, hash brown, toast, with veggie sausage. <span class="tag">v</span></span>
+        </li>
+        <li class="menu-item">
+          <span class="name">Eggs &amp; Bacon</span>
+          <span class="desc">Two free-range eggs cooked your way, with bacon and toast.</span>
+        </li>
+        <li class="menu-item">
+          <span class="name">Eggs on Toast</span>
+          <span class="desc">Scrambled, fried, poached. Hot, fresh, simple.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h2>Jacket Potatoes</h2>
+      <p class="gloss">Oven-baked, fluffy middle, crisp skin. Pick your fillings.</p>
+      <ul class="fillings">
+        <li>Cheese</li>
+        <li>Beans</li>
+        <li>Beans &amp; Cheese</li>
+        <li>Tuna Mayo</li>
+        <li>Tuna &amp; Sweetcorn</li>
+        <li>Coronation Chicken</li>
+        <li>Chilli</li>
+        <li>Prawn Mayo</li>
+        <li>Cheese &amp; Coleslaw</li>
+        <li>Daily Special — ask at the counter</li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h2>Paninis &amp; Toasties</h2>
+      <p class="gloss">Pressed hot. Served with a side salad and crisps.</p>
+      <ul class="menu-list">
+        <li class="menu-item"><span class="name">Ham &amp; Cheese</span><span class="desc">Honest and hot.</span></li>
+        <li class="menu-item"><span class="name">Tuna Melt</span><span class="desc">Tuna mayo, melted cheese, red onion.</span></li>
+        <li class="menu-item"><span class="name">Chicken &amp; Pesto</span><span class="desc">Roast chicken, mozzarella, fresh pesto.</span></li>
+        <li class="menu-item"><span class="name">Brie &amp; Cranberry</span><span class="desc">Sweet, melty, properly satisfying. <span class="tag">v</span></span></li>
+        <li class="menu-item"><span class="name">Bacon Brie</span><span class="desc">A Silver Spoon favourite.</span></li>
+        <li class="menu-item"><span class="name">Veggie Mediterranean</span><span class="desc">Roasted peppers, courgette, mozzarella, pesto. <span class="tag">v</span></span></li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h2>Omelettes</h2>
+      <p class="gloss">Three-egg, folded to order. Served with salad or chips.</p>
+      <ul class="menu-list">
+        <li class="menu-item"><span class="name">Plain</span><span class="desc">Just eggs, butter, salt, pepper. <span class="tag">v · gf</span></span></li>
+        <li class="menu-item"><span class="name">Cheese</span><span class="desc">Cheddar, melted through. <span class="tag">v · gf</span></span></li>
+        <li class="menu-item"><span class="name">Ham &amp; Cheese</span><span class="desc">Cooked ham, cheddar. <span class="tag">gf</span></span></li>
+        <li class="menu-item"><span class="name">Mushroom</span><span class="desc">Sautéed mushrooms, parsley. <span class="tag">v · gf</span></span></li>
+        <li class="menu-item"><span class="name">Western</span><span class="desc">Ham, onion, peppers, cheese. <span class="tag">gf</span></span></li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h2>Lunches &amp; Mains</h2>
+      <p class="gloss">A short, daily-changing list of plate meals.</p>
+      <ul class="menu-list">
+        <li class="menu-item"><span class="name">Homemade Lasagne</span><span class="desc">With chips or garlic bread and salad.</span></li>
+        <li class="menu-item"><span class="name">Scampi &amp; Chips</span><span class="desc">Breaded scampi, chips, peas, tartare.</span></li>
+        <li class="menu-item"><span class="name">Chicken Curry</span><span class="desc">With rice or chips, naan bread.</span></li>
+        <li class="menu-item"><span class="name">Sausage, Egg &amp; Chips</span><span class="desc">Cafe classic. Done properly.</span></li>
+        <li class="menu-item"><span class="name">Fish &amp; Chips</span><span class="desc">With mushy peas and tartare.</span></li>
+        <li class="menu-item"><span class="name">Daily Special</span><span class="desc">Chalked up on the board. Ask at the counter.</span></li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <h2>Drinks &amp; Sweet Things</h2>
+      <p class="gloss">Hot drinks, cold drinks, cakes from the counter.</p>
+      <ul class="menu-list">
+        <li class="menu-item"><span class="name">Tea</span><span class="desc">Pot for one, pot for two. Builders'-strength on request.</span></li>
+        <li class="menu-item"><span class="name">Coffee</span><span class="desc">Espresso, americano, cappuccino, latte, mocha, hot chocolate.</span></li>
+        <li class="menu-item"><span class="name">Cold Drinks</span><span class="desc">Cans, juices, water, milkshakes.</span></li>
+        <li class="menu-item"><span class="name">Cakes &amp; Slices</span><span class="desc">Changes daily — have a look at the counter.</span></li>
+      </ul>
+    </div>
+
+    <p class="diet-key">
+      <span>v</span> vegetarian &nbsp;·&nbsp;
+      <span>vg</span> vegan option available &nbsp;·&nbsp;
+      <span>gf</span> gluten-free option available
+    </p>
+
+    <p style="margin-top:2rem;color:#5a4538;font-size:.9rem;font-style:italic">Please tell our team about any allergies when you order — we'll do our best to accommodate.</p>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Hungry? Pop in.</h2>
+    <p class="lede">No bookings needed. Open seven days a week on Norfolk Street, King's Lynn.</p>
+    <div class="actions">
+      <a class="btn primary" href="tel:+441553760057">Call 01553 760057</a>
+      <a class="btn ghost" href="contact.html">Find us on the map</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h4>Silver Spoon Cafe &amp; Restaurant</h4>
+        <p>A family-run cafe on Norfolk Street, King's Lynn. Honest food, generous portions, a clean room and a warm welcome.</p>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <p>121–122 Norfolk Street<br>King's Lynn<br>Norfolk PE30 1AP</p>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <p><a href="tel:+441553760057">01553 760057</a><br>Mon–Sat 8am – 6pm<br>Sun 9am – 5pm</p>
+      </div>
+    </div>
+    <p class="fine">© Silver Spoon Cafe &amp; Restaurant, King's Lynn. Site by Karam Binning.</p>
+  </div>
+</footer>
+
+</body>
+</html>
